@@ -1,10 +1,10 @@
 package com.kelompok;
 
 public class Rumus3D {
-    float tinggi,panjang,lebar,sisiMiring,jari,alas,tinggilimas,tinggiprisma;
+    float tinggi,panjang,lebar,sisiMiring,jari,alas,tinggilimas;
 
     // constructor
-    Rumus3D(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas, float tinggilimas, float tinggiprisma){
+    Rumus3D(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas, float tinggilimas){
         this.tinggi = tinggi;
         this.panjang = panjang;
         this.lebar = lebar;
@@ -12,10 +12,8 @@ public class Rumus3D {
         this.jari = jari;
         this.alas = alas;
         this.tinggilimas = tinggilimas;
-        this.tinggiprisma= tinggiprisma;
     }
 
-    // method attack
     void kubus(float sisi){
         System.out.println("V\t= s x s x s");
         System.out.println(" \t= "+sisi+" x "+sisi+" x "+sisi);
@@ -55,6 +53,7 @@ public class Rumus3D {
     }
     
     void prismasegitiga(float alas, float tinggi, float tinggiprisma){
+        tinggiprisma=(float) Math.sqrt(Math.pow(1/2*alas, 2) + Math.pow(tinggi, 2));
         System.out.println("V\t= 1/2 x a x t x T");
         System.out.println(" \t= 1/2 x "+alas+" x "+tinggi+" x "+tinggiprisma);
         System.out.println(" \t= "+0.5*alas*tinggi*tinggiprisma);
