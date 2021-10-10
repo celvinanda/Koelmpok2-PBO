@@ -1,10 +1,10 @@
 package com.kelompok;
 
-public class Rumus3DKeliling {
+public class Rumus3DLuasPermukaan {
     String type = "Detail";
 
     // subclass constructor
-//    Rumus3DKeliling(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas){
+//    Rumus3DLuasPermukaan(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas){
 //        super(tinggi, panjang, lebar, sisiMiring,jari,alas);
 //    }
 //
