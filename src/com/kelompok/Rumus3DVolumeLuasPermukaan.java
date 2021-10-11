@@ -1,8 +1,8 @@
 package com.kelompok;
 
-public class Rumus3DLuasPermukaan extends Rumus3D{ 
+public class Rumus3DVolumeLuasPermukaan extends Rumus3DVolume {
 
-    Rumus3DLuasPermukaan(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas, float tinggilimas, float tinggiprisma){
+    Rumus3DVolumeLuasPermukaan(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas, float tinggilimas, float tinggiprisma){
             super(tinggi, panjang, lebar, sisiMiring , jari , alas , tinggilimas,tinggiprisma);
     }
 
