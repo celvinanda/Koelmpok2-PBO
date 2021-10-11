@@ -1,9 +1,9 @@
 package com.kelompok;
 
-public class Rumus3D {
+public class Rumus3DVolume {
     float tinggi,panjang,lebar,sisiMiring,jari,alas,tinggilimas,tinggiprisma;
 
-    Rumus3D(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas, float tinggilimas, float tinggiprisma){
+    Rumus3DVolume(float tinggi, float panjang, float lebar, float sisiMiring, float jari, float alas, float tinggilimas, float tinggiprisma){
         this.tinggi = tinggi;
         this.panjang = panjang;
         this.lebar = lebar;
