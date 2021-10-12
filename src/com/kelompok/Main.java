@@ -3,9 +3,8 @@ package com.kelompok;
 
 import java.util.Scanner;
 
-public class Main {
-
-
+public class Main implements Data {
+	
 	private static Rumus2D luas2D,keliling2D;
 	private static Rumus3DVolume luas3D,keliling3DLuasPermukaan;
 	private static float tinggi,panjang,lebar,sisiMiring,jari,alas,sisi,tinggiPrisma,tinggiLimas;
@@ -13,11 +12,6 @@ public class Main {
 	private static int opsiDetail = 0;
 	private static int opsiHitung = 0;
 
-	private static final String [] opsi1 = {"Rumus 2D","Rumus 3D","Rumus 2D & 3D (dengan input default 10)"};
-	private static final String [] opsi2D = {"Rumus 2D Luas","Rumus 2D Keliling"};
-	private static final String [] opsi2DDetail = {"Persegi","Persegi Panjang","Segitiga","Lingkaran"};
-	private static final String [] opsi3D = {"Rumus Volume 3D","Rumus 3D Luas Permukaan"};
-	private static final String [] opsi3DDetail = {"Kubus","Balok","Bola","Tabung","Limas Segitiga","Limas Segiempat","Prisma Segitiga"};
 
 	public static void main(String[] args) {
 		Scanner inputNum = new Scanner(System.in);
