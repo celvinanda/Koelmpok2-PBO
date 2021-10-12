@@ -3,8 +3,9 @@ package com.kelompok;
 
 import java.util.Scanner;
 
-public class Main implements Data {
-	
+public class Main implements DaftarBidang {
+
+
 	private static Rumus2D luas2D,keliling2D;
 	private static Rumus3DVolume luas3D,keliling3DLuasPermukaan;
 	private static float tinggi,panjang,lebar,sisiMiring,jari,alas,sisi,tinggiPrisma,tinggiLimas;
@@ -22,13 +23,14 @@ public class Main implements Data {
 		luas3D = new Rumus3DVolume(tinggi,panjang,lebar,sisiMiring,jari,alas,sisi,tinggiPrisma);
 		keliling3DLuasPermukaan = new Rumus3DVolumeLuasPermukaan(tinggi,panjang,lebar,sisiMiring,jari,alas,sisi,tinggiPrisma);
 
-		System.out.println("Perhitungan Bidang");
+		System.out.println("------------Perhitungan Bidang------------\n");
 		for (int i = 0; i < opsi1.length; i++) {
 			System.out.println("Ketik "+ (i+1) + " untuk melihat hasil perhitungan dari "+ opsi1[i]);
 		}
 		System.out.print("Silahkan ketikan pilihan : ");
 		opsi =inputNum.nextInt();
-
+                System.out.println();
+                
 		switch (opsi){
 
 			case 1 :
@@ -39,7 +41,7 @@ public class Main implements Data {
 				opsiDetail = inputNum.nextInt();
 				switch (opsiDetail){
 					case 1:
-						System.out.println("------------- ");
+						System.out.println("\n------------- ");
 						System.out.println("Rumus 2D Luas ");
 						System.out.println("------------- \n");
 						for (int i = 0; i < opsi2DDetail.length; i++) {
@@ -49,11 +51,13 @@ public class Main implements Data {
 						opsiHitung = inputNum.nextInt();
 						switch (opsiHitung){
 							case 1:
+                                                                System.out.println("\nLUAS PERSEGI\n");
 								System.out.print("Sisi = ");
 								sisi = inputNum.nextFloat();
 								luas2D.persegi(sisi);
 								break;
 							case 2:
+                                                                System.out.println("\nLUAS PERSEGI PANJANG\n");
 								System.out.print("Panjang = ");
 								panjang = inputNum.nextFloat();
 								System.out.print("Lebar = ");
@@ -61,6 +65,7 @@ public class Main implements Data {
 								luas2D.persegipanjang(panjang,lebar);
 								break;
 							case 3:
+                                                                System.out.println("\nLUAS SEGITIGA\n");
 								System.out.print("Tinggi = ");
 								tinggi = inputNum.nextFloat();
 								System.out.print("Alas = ");
@@ -68,6 +73,7 @@ public class Main implements Data {
 								luas2D.segitiga(tinggi,alas,1);
 								break;
 							case 4:
+                                                                System.out.println("\nLUAS LINGKARAN\n");
 								System.out.print("Jari - jari = ");
 								jari = inputNum.nextInt();
 								luas2D.lingkaran(jari);
@@ -75,7 +81,7 @@ public class Main implements Data {
 						}
 						break;
 					case 2:
-						System.out.println("----------------- ");
+						System.out.println("\n----------------- ");
 						System.out.println("Rumus 2D Keliling");
 						System.out.println("----------------- \n");
 						for (int i = 0; i < opsi2DDetail.length; i++) {
@@ -85,11 +91,13 @@ public class Main implements Data {
 						opsiHitung = inputNum.nextInt();
 						switch (opsiHitung){
 							case 1:
+                                                                System.out.println("\nKELILING PERSEGI\n");
 								System.out.print("Sisi = ");
 								sisi = inputNum.nextFloat();
 								keliling2D.persegi(sisi);
 								break;
 							case 2:
+                                                                System.out.println("\nKELILING PERSEGI PANJANG\n");
 								System.out.print("Panjang = ");
 								panjang = inputNum.nextFloat();
 								System.out.print("Lebar = ");
@@ -97,6 +105,7 @@ public class Main implements Data {
 								keliling2D.persegipanjang(panjang,lebar);
 								break;
 							case 3:
+                                                                System.out.println("\nKELILING SEGITIGA\n");
 								System.out.print("Tinggi = ");
 								tinggi = inputNum.nextFloat();
 								System.out.print("Alas = ");
@@ -106,6 +115,7 @@ public class Main implements Data {
 								keliling2D.segitiga(tinggi,alas,sisiMiring);
 								break;
 							case 4:
+                                                                System.out.println("\nKELILING LINGKARAN\n");
 								System.out.print("Jari - jari = ");
 								jari = inputNum.nextInt();
 								keliling2D.lingkaran(jari);
@@ -125,7 +135,7 @@ public class Main implements Data {
 				opsiDetail = inputNum.nextInt();
 				switch (opsiDetail){
 					case 1:
-						System.out.println("---------------- ");
+						System.out.println("\n---------------- ");
 						System.out.println("Rumus Volume 3D");
 						System.out.println("---------------- \n");
 						for (int i = 0; i < opsi3DDetail.length; i++) {
@@ -135,11 +145,13 @@ public class Main implements Data {
 						opsiHitung = inputNum.nextInt();
 						switch (opsiHitung){
 							case 1:
+                                                                System.out.println("\nVOLUME KUBUS\n");
 								System.out.print("Sisi = ");
 								sisi = inputNum.nextFloat();
 								luas3D.kubus(sisi);
 								break;
 							case 2:
+                                                                System.out.println("\nVOLUME BALOK\n");
 								System.out.print("Panjang = ");
 								panjang = inputNum.nextFloat();
 								System.out.print("Lebar = ");
@@ -149,11 +161,13 @@ public class Main implements Data {
 								luas3D.balok(panjang,lebar,tinggi);
 								break;
 							case 3:
+                                                                System.out.println("\nVOLUME BOLA\n");
 								System.out.print("Jari - Jari = ");
 								jari = inputNum.nextFloat();
 								luas3D.bola(jari);
 								break;
 							case 4:
+                                                                System.out.println("\nVOLUME TABUNG\n");
 								System.out.print("Tinggi = ");
 								tinggi = inputNum.nextInt();
 								System.out.print("Jari - jari = ");
@@ -161,6 +175,7 @@ public class Main implements Data {
 								luas3D.tabung(tinggi,jari);
 								break;
 							case 5:
+                                                                System.out.println("\nVOLUME LIMAS SEGITIGA\n");
 								System.out.print("Alas = ");
 								alas = inputNum.nextInt();
 								System.out.print("Tinggi = ");
@@ -170,6 +185,7 @@ public class Main implements Data {
 								luas3D.limassegitiga(alas,tinggi,tinggiLimas);
 								break;
 							case 6:
+                                                                System.out.println("\nVOLUME LIMAS SEGIEMPAT\n");
 								System.out.print("Sisi = ");
 								sisi = inputNum.nextInt();
 								System.out.print("Tinggi Limas = ");
@@ -177,6 +193,7 @@ public class Main implements Data {
 								luas3D.limassegiempat(sisi,tinggiLimas);
 								break;
 							case 7:
+                                                                System.out.println("\nVOLUME PRISMA SEGITIGA\n");
 								System.out.print("Alas = ");
 								alas = inputNum.nextInt();
 								System.out.print("Tinggi= ");
@@ -198,11 +215,13 @@ public class Main implements Data {
 						opsiHitung = inputNum.nextInt();
 						switch (opsiHitung){
 							case 1:
+                                                                System.out.println("\nLUAS PERMUKAAN KUBUS\n");
 								System.out.print("Sisi = ");
 								sisi = inputNum.nextFloat();
 								keliling3DLuasPermukaan.kubus(sisi);
 								break;
 							case 2:
+                                                                System.out.println("\nLUAS PERMUKAAN BALOK\n");
 								System.out.print("Panjang = ");
 								panjang = inputNum.nextFloat();
 								System.out.print("Lebar = ");
@@ -212,11 +231,13 @@ public class Main implements Data {
 								keliling3DLuasPermukaan.balok(panjang,lebar,tinggi);
 								break;
 							case 3:
+                                                                System.out.println("\nLUAS PERMUKAAN BOLA\n");
 								System.out.print("Jari - Jari = ");
 								jari = inputNum.nextFloat();
 								keliling3DLuasPermukaan.bola(jari);
 								break;
 							case 4:
+                                                                System.out.println("\nLUAS PERMUKAAN TABUNG\n");
 								System.out.print("Tinggi = ");
 								tinggi = inputNum.nextInt();
 								System.out.print("Jari - jari = ");
@@ -224,6 +245,7 @@ public class Main implements Data {
 								keliling3DLuasPermukaan.tabung(tinggi,jari);
 								break;
 							case 5:
+                                                                System.out.println("\nLUAS PERMUKAAN LIMAS SEGITIGA\n");
 								System.out.print("Alas = ");
 								alas = inputNum.nextInt();
 								System.out.print("Tinggi = ");
@@ -233,6 +255,7 @@ public class Main implements Data {
 								keliling3DLuasPermukaan.limassegitiga(alas,tinggi,tinggiLimas);
 								break;
 							case 6:
+                                                                System.out.println("\nLUAS PERMUKAAN LIMAS SEGIEMPAT\n");
 								System.out.print("Sisi = ");
 								sisi = inputNum.nextInt();
 								System.out.print("Tinggi Limas = ");
@@ -240,6 +263,7 @@ public class Main implements Data {
 								keliling3DLuasPermukaan.limassegiempat(sisi,tinggiLimas);
 								break;
 							case 7:
+                                                                System.out.println("\nLUAS PERMUKAAN PRISMA SEGITIGA\n");
 								System.out.print("Alas = ");
 								alas = inputNum.nextInt();
 								System.out.print("Tinggi= ");
